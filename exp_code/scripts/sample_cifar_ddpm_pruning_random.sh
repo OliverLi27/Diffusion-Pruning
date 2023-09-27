@@ -1,0 +1,14 @@
+python finetune.py \
+--config cifar10.yml \
+--exp run/sample \
+--sample \
+--timesteps 100 \
+--eta 0 \
+--ni \
+--doc sample \
+--skip_type quad  \
+--pruning_ratio 0.0 \
+--fid \
+--use_ema \
+--restore_from run/finetune_simple_v2/cifar10_ours_T=0.05.pth/logs/post_training/random_pruned_model_0.25.pth \
+--load_pruned_model run/finetune_simple_v2/cifar10_ours_T=0.05.pth/logs/post_training/random_pruned_model_0.25.pth \
